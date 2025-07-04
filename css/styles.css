@@ -119,20 +119,94 @@ footer .attribution a {
 @media only screen and (min-width: 23.5rem) {
   body {
     background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    padding: 8% 2.08%;
+    max-width: 73.75rem;
+    width: 100vw;
+    margin: 0 auto;
   }
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 43% 48%;
     grid-template-rows: auto auto;
-    gap: 2.5rem;
+    gap: 3.9625rem 4.55rem;
     grid-template-areas: "heading ratings" "reviews reviews";
+    width: 100%;
   }
-  .heading {
+  .grid .heading {
     grid-area: heading;
+  }
+  .grid .heading h1 {
+    text-align: left;
+    width: 80%;
+    margin: 0 0 1.875rem;
+    font-size: 3.4rem;
+    line-height: 0.9;
+  }
+  .grid .heading p {
+    font-size: 1.25rem;
+    text-align: left;
+    line-height: 1.2;
+    width: 90%;
+  }
+  .grid .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    height: 3.4375rem;
+    width: 27.8125rem;
+    background-color: var(--light-grayish-magenta);
+    margin-bottom: 1rem;
+    padding: 0 6.3%;
+    gap: 6.5%;
+  }
+  .grid .container .stars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 32.2%;
+    height: 0.9375rem;
+    justify-items: center;
+  }
+  .grid .container p {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .grid .container:nth-of-type(2) {
+    margin-left: 8.32%;
+  }
+  .grid .container:nth-of-type(3) {
+    margin-left: 16.7%;
+    margin-bottom: 0;
+  }
+  .grid .reviews {
+    flex-direction: row;
+    grid-area: reviews;
+    gap: 3.26%;
+  }
+  .grid .reviews .card {
+    padding: 1.875rem;
+    width: 31.16%;
+  }
+  .grid .reviews .reviewer {
+    padding: 0.625rem 0 1.5625rem;
+    gap: 1.25rem;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .grid .reviews .reviewer img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+  .grid .reviews .card:nth-of-type(2) {
+    margin-top: 1.5%;
+  }
+  .grid .reviews .card:nth-of-type(3) {
+    margin-top: 3%;
   }
   .ratings {
     grid-area: ratings;
-  }
-  .reviews {
-    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }/*# sourceMappingURL=styles.css.map */

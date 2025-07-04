@@ -5,6 +5,10 @@
     @return (math.div($pixels, $context))*1rem;
 }
 
+// $body-width: min(rem(1180), 100vw)-rem(60);
+// $grid-gap-h: calc($body-width*0.065*1rem);
+// $grid-gap-v: calc($body-width*0.0566*1rem);
+
 :root {
     --very-dark-magenta: hsl(300, 43%, 22%);
     --soft-pink: hsla(333, 80%, 67%, 0.7);
@@ -137,32 +141,120 @@ footer {
     }
 }
 
-
-
-
 @media only screen and (min-width:rem(376)) {
+
     body {
         background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+        padding: 8% 2.08%;
+        max-width: rem(1180);
+        width: 100vw;
+        margin: 0 auto;
     }
 
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 43% 48%;
         grid-template-rows: auto auto;
-        gap: rem(40);
+        gap: rem(63.4) rem(72.8);
         grid-template-areas:
             "heading ratings"
             "reviews reviews";
-    }
+        width: 100%;
 
-    .heading {
-        grid-area: heading;
+        .heading {
+            grid-area: heading;
+            // width: rem(482.5);
+
+            h1 {
+                text-align: left;
+                width: 80%;
+                margin: 0 0 rem(30);
+                font-size: 3.4rem;
+                line-height: 0.9;
+            }
+
+            p {
+
+                font-size: rem(20);
+                text-align: left;
+                line-height: 1.2;
+                width: 90%;
+            }
+        }
+
+        .container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            height: rem(55);
+            width: rem(445);
+            background-color: var(--light-grayish-magenta);
+            margin-bottom: rem(16);
+            padding: 0 6.3%;
+            gap: 6.5%;
+
+            .stars {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                width: 32.2%;
+                height: rem(15);
+                justify-items: center;
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 1.05rem;
+            }
+        }
+
+        .container:nth-of-type(2) {
+            margin-left: 8.32%;
+        }
+
+        .container:nth-of-type(3) {
+            margin-left: 16.7%;
+            margin-bottom: 0;
+        }
+
+        .reviews {
+            flex-direction: row;
+            grid-area: reviews;
+
+            // gap: 2.67%;
+            gap: 3.26%;
+
+            .card {
+                padding: rem(30);
+                width: 31.16%;
+            }
+
+            .reviewer {
+                padding: rem(10) 0 rem(25);
+                gap: rem(20);
+                align-items: center;
+                font-weight: 700;
+                font-size: 1rem;
+
+                img {
+                    width: rem(40);
+                    height: rem(40);
+                    border-radius: 50%;
+                }
+            }
+
+            .card:nth-of-type(2) {
+                margin-top: 1.5%;
+            }
+
+            .card:nth-of-type(3) {
+                margin-top: 3%;
+            }
+        }
     }
 
     .ratings {
         grid-area: ratings;
-    }
-
-    .reviews {
-        grid-area: reviews;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

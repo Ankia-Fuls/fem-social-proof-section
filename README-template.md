@@ -91,9 +91,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Multiple Backgrounds](https://www.w3schools.com/css/css3_backgrounds.asp) - This helped me see how to add more than one image to a background.
-
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Different Quotation Mark Stylings](https://web.cs.dal.ca/~jamie/CS3172/examples/XHTML/entities/quotemarks.html) - This helped me to replace the given quotaion marks with the more stylized version shown in the images.
 
 ## Author
 
