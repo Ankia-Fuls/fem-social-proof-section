@@ -16,9 +16,9 @@ body {
 }
 
 body {
-  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
-  background-position: left top, right bottom;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url(../images/bg-pattern-top-mobile.svg);
+  background-position: left top;
+  background-repeat: no-repeat;
   min-height: 100vh;
   font-family: "League Spartan", sans-serif;
   font-size: 0.9375rem;
@@ -26,7 +26,7 @@ body {
 }
 
 footer {
-  padding: 1rem;
+  padding: 2rem;
 }
 footer .attribution {
   font-size: 11px;
@@ -78,6 +78,9 @@ footer .attribution a {
   height: 0.9375rem;
   justify-items: center;
 }
+.grid .container .stars img {
+  height: inherit;
+}
 .grid .container p {
   font-weight: 700;
   font-size: 1rem;
@@ -116,9 +119,11 @@ footer .attribution a {
   letter-spacing: 0.0625rem;
 }
 
-@media only screen and (min-width: 23.5rem) {
+@media only screen and (min-width: 38.8125rem) {
   body {
     background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
     padding: 8% 2.08%;
     max-width: 73.75rem;
     width: 100vw;
@@ -152,7 +157,7 @@ footer .attribution a {
     align-items: center;
     justify-content: start;
     height: 3.4375rem;
-    width: 27.8125rem;
+    width: 82.77%;
     background-color: var(--light-grayish-magenta);
     margin-bottom: 1rem;
     padding: 0 6.3%;
@@ -184,6 +189,7 @@ footer .attribution a {
   .grid .reviews .card {
     padding: 1.875rem;
     width: 31.16%;
+    height: 14.6875rem;
   }
   .grid .reviews .reviewer {
     padding: 0.625rem 0 1.5625rem;
@@ -208,5 +214,10 @@ footer .attribution a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media only screen and (min-width: 38.8125rem) and (max-width: 58.125rem) {
+  html {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=styles.css.map */
