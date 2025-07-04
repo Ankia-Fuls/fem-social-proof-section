@@ -11,7 +11,7 @@
 
 :root {
     --very-dark-magenta: hsl(300, 43%, 22%);
-    --soft-pink: hsla(333, 80%, 67%, 0.7);
+    --soft-pink: hsla(333, 80%, 67%, 0.8);
     --dark-grayish-magenta: hsl(303, 10%, 53%);
     --light-grayish-magenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
@@ -224,12 +224,10 @@ footer {
         .reviews {
             flex-direction: row;
             grid-area: reviews;
-
-            // gap: 2.67%;
             gap: 3.26%;
 
             .card {
-                padding: rem(30);
+                padding: rem(32);
                 width: 31.16%;
                 height: rem(235);
             }
@@ -246,6 +244,12 @@ footer {
                     height: rem(40);
                     border-radius: 50%;
                 }
+            }
+
+            .review {
+                letter-spacing: rem(0);
+                font-size: 1rem;
+                line-height: rem(20);
             }
 
             .card:nth-of-type(2) {
@@ -268,6 +272,6 @@ footer {
 
 @media only screen and (min-width:rem(621)) and (max-width:rem(930)) {
     html {
-        font-size: rem(12);
+        font-size: rem(11);
     }
 }

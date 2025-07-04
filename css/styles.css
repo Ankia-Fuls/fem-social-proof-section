@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 :root {
   --very-dark-magenta: hsl(300, 43%, 22%);
-  --soft-pink: hsla(333, 80%, 67%, 0.7);
+  --soft-pink: hsla(333, 80%, 67%, 0.8);
   --dark-grayish-magenta: hsl(303, 10%, 53%);
   --light-grayish-magenta: hsl(300, 24%, 96%);
   --white: hsl(0, 0%, 100%);
@@ -187,7 +187,7 @@ footer .attribution a {
     gap: 3.26%;
   }
   .grid .reviews .card {
-    padding: 1.875rem;
+    padding: 2rem;
     width: 31.16%;
     height: 14.6875rem;
   }
@@ -202,6 +202,11 @@ footer .attribution a {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
+  }
+  .grid .reviews .review {
+    letter-spacing: 0rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
   .grid .reviews .card:nth-of-type(2) {
     margin-top: 1.5%;
@@ -218,6 +223,6 @@ footer .attribution a {
 }
 @media only screen and (min-width: 38.8125rem) and (max-width: 58.125rem) {
   html {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
 }/*# sourceMappingURL=styles.css.map */
