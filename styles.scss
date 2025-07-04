@@ -5,10 +5,6 @@
     @return (math.div($pixels, $context))*1rem;
 }
 
-// $body-width: min(rem(1180), 100vw)-rem(60);
-// $grid-gap-h: calc($body-width*0.065*1rem);
-// $grid-gap-v: calc($body-width*0.0566*1rem);
-
 :root {
     --very-dark-magenta: hsl(300, 43%, 22%);
     --soft-pink: hsla(333, 80%, 67%, 0.8);
