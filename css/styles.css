@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9375rem;
+  padding: 4.6875rem 1.25rem;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  gap: 2.5rem;
+}
+
+.reviewer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 23.5rem) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2.5rem;
+    grid-template-areas: "heading ratings" "reviews reviews";
+  }
+  .heading {
+    grid-area: heading;
+  }
+  .ratings {
+    grid-area: ratings;
+  }
+  .reviews {
+    grid-area: reviews;
+  }
+}/*# sourceMappingURL=styles.css.map */

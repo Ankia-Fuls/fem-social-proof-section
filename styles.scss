@@ -1,0 +1,83 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@function rem($pixels, $context: 16) {
+    @return (math.div($pixels, $context))*1rem;
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    min-height: 100vh;
+    font-family: "League Spartan", sans-serif;
+    font-size: rem(15);
+    padding: rem(75) rem(20);
+}
+
+footer {
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    gap: rem(40);
+}
+
+.reviewer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media only screen and (min-width:rem(376)) {
+    body {
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: rem(40);
+        grid-template-areas:
+            "heading ratings"
+            "reviews reviews";
+    }
+
+    .heading {
+        grid-area: heading;
+    }
+
+    .ratings {
+        grid-area: ratings;
+    }
+
+    .reviews {
+        grid-area: reviews;
+    }
+}
